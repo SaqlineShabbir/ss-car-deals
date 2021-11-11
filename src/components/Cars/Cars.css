@@ -1,0 +1,9 @@
+.cars-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.cars-main{
+    background-color:rgb(224, 223, 223);
+    padding:100px;
+}

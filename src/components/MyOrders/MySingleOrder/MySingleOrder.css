@@ -1,0 +1,15 @@
+.my-tour{
+    padding:30px;
+    margin:10px;
+  }
+  
+  .my-tour img{
+  height: 200px;
+  border-radius: 20px;;
+  }
+  .cancel-btn{
+      border: 1px solid #000;
+      padding-inline: 20px;
+      margin-left: 200px;
+      background-color: #fff;
+  }
