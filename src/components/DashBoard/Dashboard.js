@@ -16,6 +16,10 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import './DashBoard.css'
 import MyOrders from '../MyOrders/MyOrders';
 import Review from '../Review/Review';
+import ManageCars from '../ManageCars/ManageCars/ManageCars';
+import AdminRoute from '../AdminRoute/AdminRoute';
+import Payment from '../Payment/Payment';
+
 const Dashboard = () => {
     const {logOut,user,admin} =useAuth();
     let { path, url } = useRouteMatch();
@@ -39,10 +43,16 @@ const Dashboard = () => {
         <Nav className="justify-content-end flex-grow-1 pe-3">
           <Nav.Link as={Link} to={`${url}/myOrders`}>My Orders</Nav.Link>
           <Nav.Link as={Link} to={`${url}/review`}>Review</Nav.Link>
+          <Nav.Link as={Link} to={`${url}/payment`}>Pay</Nav.Link>
+
           {admin && <Nav.Link as={Link} to={`${url}/addCars`}>addCars</Nav.Link>}
          
-          { 
+        { 
          admin &&   <Nav.Link as={Link} to={`${url}/makeAdmin`}>Make Admin</Nav.Link>
+            
+         }
+        { 
+         admin &&   <Nav.Link as={Link} to={`${url}/manageCars`}>Manage Cars</Nav.Link>
             
          }
 
@@ -65,15 +75,21 @@ const Dashboard = () => {
         <Route  path={`${path}/myOrders`}>
             <MyOrders></MyOrders>
         </Route>
-        <Route  path={`${path}/makeAdmin`}>
+        <AdminRoute  path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>
-        </Route>
-        <Route  path={`${path}/addCars`}>
+        </AdminRoute>
+        <AdminRoute  path={`${path}/addCars`}>
           <AddCars></AddCars>
-        </Route>
+        </AdminRoute>
         <Route  path={`${path}/review`}>
           <Review></Review>
         </Route>
+        <Route  path={`${path}/payment`}>
+          <Payment></Payment>
+        </Route>
+        <AdminRoute  path={`${path}/manageCars`}>
+          <ManageCars></ManageCars>
+        </AdminRoute>
       </Switch>
    </div>
        </div>
