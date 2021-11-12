@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import './Review.css'
+import SingleReview from './SingleReview/SingleReview';
 
 const Review = () => {
+    const [reviews, setReviews] =useState()
+    useEffect(()=>{
+        fetch('http://localhost:5000/reviews')
+        .then(res => res.json())
+        .then(data =>{ 
+            console.log(data)
+            setReviews(data)})
+    },[])
     return (
-        <div>
-            <h1>This is Review page</h1>
-        </div>
+        <div className="reviews-main">
+        <div className="reviews-container">
+    
+        {
+        reviews?.map(review => <SingleReview key={review._id} review={review}></SingleReview>)
+        }
+  </div>
+  
+   </div>
     );
 };
 

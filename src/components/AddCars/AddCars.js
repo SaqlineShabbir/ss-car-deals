@@ -21,7 +21,7 @@ const AddCars = () => {
        
     } 
     return (
-        <div className="AddTours">
+        <div className="AddCars">
         <h4 className="mt-5 text-center">You Can Add A New Car Here</h4>
         <form onSubmit={handleSubmit(onSubmit)}>
   <input {...register("name", { required: true })} placeholder="Car Name"/>

@@ -1,3 +1,27 @@
 .dashboard-container{
     min-height: 80vh;
 }
+
+.dashboard-user img{
+  width: 70px;
+}
+
+.dashboard-links{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.dashboard-button {
+    border:none ;
+    width:200px;
+    padding: 10px;
+    background-color:rgba(0, 0, 255, 0.822);
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
+
+.dashboard-button:hover {
+    background-color:red;
+}

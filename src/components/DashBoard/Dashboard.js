@@ -19,6 +19,7 @@ import Review from '../Review/Review';
 import ManageCars from '../ManageCars/ManageCars/ManageCars';
 import AdminRoute from '../AdminRoute/AdminRoute';
 import Payment from '../Payment/Payment';
+import AddReview from '../Review/AddReview/AddReview';
 
 const Dashboard = () => {
     const {logOut,user,admin} =useAuth();
@@ -29,6 +30,7 @@ const Dashboard = () => {
        <Navbar bg="dark" expand={false}>
   <Container fluid>
     <Navbar.Brand  className="text-white">DASH'BOARD</Navbar.Brand>
+    <Link to="/home">  <button className="dashboard-button ">Go Home</button></Link>
     <Navbar.Toggle style={{backgroundColor:"white", color:"white"}}aria-controls="offcanvasNavbar" />
     <Navbar.Offcanvas
      
@@ -37,22 +39,28 @@ const Dashboard = () => {
       placement="end"
     >
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title  id="offcanvasNavbarLabel" >Offcanvas</Offcanvas.Title>
+        <Offcanvas.Title  id="offcanvasNavbarLabel" >
+        <div className="dashboard-user">
+        <img src={user.photoURL} alt="" />
+          <h4 className="fw-bold">{user.displayName}</h4>
+          
+          </div>
+        </Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        <Nav className="justify-content-end flex-grow-1 pe-3">
-          <Nav.Link as={Link} to={`${url}/myOrders`}>My Orders</Nav.Link>
-          <Nav.Link as={Link} to={`${url}/review`}>Review</Nav.Link>
-          <Nav.Link as={Link} to={`${url}/payment`}>Pay</Nav.Link>
+        <Nav className="justify-content-end flex-grow-1 pe-3 ">
+          <Nav.Link as={Link} to={`${url}/myOrders`} className="dashboard-links"><i className="fas fa-sort-alpha-up"></i> My Orders</Nav.Link>
+          <Nav.Link as={Link} to={`${url}/addReview`} className="dashboard-links"><i className="fas fa-plus-square"></i> Add Review</Nav.Link>
+          <Nav.Link as={Link} to={`${url}/payment`} className="dashboard-links"><i className="fas fa-money-check-alt"></i> Pay</Nav.Link>
 
-          {admin && <Nav.Link as={Link} to={`${url}/addCars`}>addCars</Nav.Link>}
+          {admin && <Nav.Link as={Link} to={`${url}/addCars`} className="dashboard-links"><i className="fas fa-plus-square"></i> addCars </Nav.Link>}
          
         { 
-         admin &&   <Nav.Link as={Link} to={`${url}/makeAdmin`}>Make Admin</Nav.Link>
+         admin &&   <Nav.Link as={Link} to={`${url}/makeAdmin`} className="dashboard-links"><i className="fas fa-user-lock"></i> Make Admin </Nav.Link>
             
          }
         { 
-         admin &&   <Nav.Link as={Link} to={`${url}/manageCars`}>Manage Cars</Nav.Link>
+         admin &&   <Nav.Link as={Link} to={`${url}/manageCars`} className="dashboard-links"><i className="fas fa-tools"></i> Manage Cars</Nav.Link>
             
          }
 
@@ -60,8 +68,9 @@ const Dashboard = () => {
          
          {
               user.email &&
-              <Link to="/register">  <button onClick={logOut} className="signup-button ">Log Out</button></Link>
+              <Link to="/register">  <button onClick={logOut} className="dashboard-button ">Log Out</button></Link>
          }
+        
          
         </Nav>
       
@@ -81,8 +90,8 @@ const Dashboard = () => {
         <AdminRoute  path={`${path}/addCars`}>
           <AddCars></AddCars>
         </AdminRoute>
-        <Route  path={`${path}/review`}>
-          <Review></Review>
+        <Route  path={`${path}/addReview`}>
+          <AddReview></AddReview>
         </Route>
         <Route  path={`${path}/payment`}>
           <Payment></Payment>

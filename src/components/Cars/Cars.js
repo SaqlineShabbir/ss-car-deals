@@ -8,7 +8,7 @@ const Cars = () => {
         fetch('http://localhost:5000/cars')
         .then(res => res.json())
         .then(data =>{ 
-            console.log(data)
+            
             setCars(data)})
     },[])
     return (
@@ -17,7 +17,7 @@ const Cars = () => {
         
             {
             cars?.map(car => <Car key={car._id} car={car}></Car>)
-        }
+            }
       </div>
        </div>
     );
