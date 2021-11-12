@@ -20,6 +20,7 @@ import ManageCars from '../ManageCars/ManageCars/ManageCars';
 import AdminRoute from '../AdminRoute/AdminRoute';
 import Payment from '../Payment/Payment';
 import AddReview from '../Review/AddReview/AddReview';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders/ManageAllOrders';
 
 const Dashboard = () => {
     const {logOut,user,admin} =useAuth();
@@ -60,6 +61,10 @@ const Dashboard = () => {
             
          }
         { 
+         admin &&   <Nav.Link as={Link} to={`${url}/manageAllOrders`} className="dashboard-links"><i className="fas fa-user-lock"></i> Manage All Orders </Nav.Link>
+            
+         }
+        { 
          admin &&   <Nav.Link as={Link} to={`${url}/manageCars`} className="dashboard-links"><i className="fas fa-tools"></i> Manage Cars</Nav.Link>
             
          }
@@ -86,6 +91,9 @@ const Dashboard = () => {
         </Route>
         <AdminRoute  path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>
+        </AdminRoute>
+        <AdminRoute  path={`${path}/manageAllOrders`}>
+          <ManageAllOrders></ManageAllOrders>
         </AdminRoute>
         <AdminRoute  path={`${path}/addCars`}>
           <AddCars></AddCars>

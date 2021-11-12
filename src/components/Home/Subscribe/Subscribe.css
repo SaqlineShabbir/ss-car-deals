@@ -1,0 +1,35 @@
+.Subscribe{
+    height: 200px;
+    width: 800px;
+   margin-top: 150px;
+}
+.subscribe-input{
+    width:400px;
+    margin-top: 20px;
+    margin-inline: 200px;
+}
+
+.Subscribe-container{
+   display: flex;
+   justify-content: center;
+   background-color:black;
+}
+
+@media only screen and (max-width:688px){
+    .Subscribe{
+        height: 300px;
+        width: 300px;
+       
+    }
+
+    .subscribe-input{
+
+        width:300px;
+        margin-top: 20px;
+        margin-inline:0px ;
+    }
+
+    
+    
+
+}

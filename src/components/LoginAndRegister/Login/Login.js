@@ -4,6 +4,7 @@ import Header from '../../Shared/Header/Herder'
 import { Link,useHistory,useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Login.css'
+import img from '../../../image/login.png'
 const Login = () => {
     const {loginUser,user,isLoading, authError} = useAuth()
    const [loginData, setLoginData] = useState({})
@@ -28,7 +29,7 @@ const Login = () => {
         <Header></Header>
        { !isLoading && <div className="register">
         <div>
-            {/* <img src={img} alt="" /> */}
+            <img src={img} alt="" />
             </div>
             <div className="login">
         <div className="  p-4 my-5 py-5 ">

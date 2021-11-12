@@ -6,3 +6,11 @@
    margin-block: 100px;
    margin-inline: 400px;
 }
+
+@media only screen and (max-width:688px){
+
+    .makeAdmin-from{
+        margin-block: 200px;
+        margin-inline: 00px;
+     }
+}

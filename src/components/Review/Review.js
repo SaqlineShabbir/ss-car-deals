@@ -13,6 +13,10 @@ const Review = () => {
     },[])
     return (
         <div className="reviews-main">
+           <div>
+           <h3 className="text-center mt-5 ">What Our Clients Says <span className="my-color">(Reviews)</span></h3>
+           <div className="hello"><h3>------</h3></div>
+           </div>
         <div className="reviews-container">
     
         {

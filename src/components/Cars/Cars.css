@@ -7,3 +7,18 @@
     background-color:rgb(224, 223, 223);
     padding:100px;
 }
+
+
+@media only screen and (max-width:688px){
+    .cars-container{
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .cars-main{
+        background-color:rgb(224, 223, 223);
+        padding:0px;
+    }
+
+}

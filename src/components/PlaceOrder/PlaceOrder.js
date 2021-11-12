@@ -17,6 +17,7 @@ const PlaceOrder = () => {
     
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        data.status= "pending";
         fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
@@ -24,7 +25,7 @@ const PlaceOrder = () => {
         })
         .then(res =>res.json())
         .then(data => {
-            console.log(data)
+            
             if(data.insertedId){
              alert('Successfully Added')
              reset()
@@ -63,10 +64,10 @@ const PlaceOrder = () => {
 <input defaultValue={user?.email}  {...register("email")} />
 
  {
-     exactItem[0]?.name && <input defaultValue={exactItem[0]?.name}  {...register("tourName")} />
+     exactItem[0]?.name && <input defaultValue={exactItem[0]?.name}  {...register("carName")} />
  }
  {
-  exactItem[0]?.img &&  <input defaultValue={exactItem[0]?.img} {...register("tourImg")} />
+  exactItem[0]?.img &&  <input defaultValue={exactItem[0]?.img} {...register("carImg")} />
  }
  { 
  exactItem[0]?.description &&  <input defaultValue={exactItem[0]?.description} {...register("description")} />
@@ -78,7 +79,7 @@ const PlaceOrder = () => {
  }
     <input   {...register("address")} placeholder="Address"/>
     <input   {...register("phone")} placeholder="Phone Number"/>
-  <input type="submit" value="Confirm Book"/>
+  <input type="submit" value="Confirm Order"/>
   
 
 </form>

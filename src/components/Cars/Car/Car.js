@@ -7,9 +7,9 @@ const Car = (props) => {
         <div className="car-container">
             <img src={img} alt="" />
             <div className="car-text">
-            <h3 className="">{name}</h3>
+            <h4 className="fw-bolder">{name}</h4>
             <h5 className="price">$ {number}</h5>
-            <p>{description}</p>
+            <p className="">{description}</p>
             <Link to={`/PlaceOrder/${_id}`}><button className="purchase-btn">Purchase</button></Link>
             </div>
         </div>

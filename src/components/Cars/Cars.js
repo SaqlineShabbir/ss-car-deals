@@ -13,6 +13,7 @@ const Cars = () => {
     },[])
     return (
        <div className="cars-main">
+           <h2 className="text-center fw-bolder">Our Cars</h2>
             <div className="cars-container">
         
             {

@@ -3,6 +3,7 @@ import { Spinner } from 'react-bootstrap';
 import { Link,useHistory  } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Header from '../../Shared/Header/Herder'
+import img from '../../../image/login.png'
 const Register = () => {
     const {registerUser,isLoading,authError} =useAuth()
     const history = useHistory()
@@ -32,7 +33,7 @@ const Register = () => {
         { !isLoading && <div className="register">
              
         <div>
-            {/* <img src={img} alt="" /> */}
+            <img src={img} alt="" />
             </div>
             <div className="login">
         <div className="  p-4 my-5 py-5 ">
@@ -51,7 +52,7 @@ const Register = () => {
 <br/>
 
 <p className="text-danger">{authError}</p>
-                <input className="register-button mt-2 w-100" type="submit" value="Log In" />
+                <input className="register-button mt-2 w-100" type="submit" value="Creat Account" />
             </form>
             <p className="my-3">Already Registered? <Link to="/login">Log In</Link></p>
          {/* <button onClick={handleGoogleLogIn} className="register-button w-100 "><i class="fab fa-google"></i> Sign In with Google</button> */}

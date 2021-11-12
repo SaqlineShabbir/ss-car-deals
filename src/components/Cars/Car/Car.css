@@ -1,9 +1,10 @@
 .car-container{
     background-color:black;
-    color:white;
+    color:rgba(255, 255, 255, 0.959);
     margin:30px ;
    
 }
+..car-container {}
 .car-container img{
     
   width: 400px;
@@ -31,4 +32,21 @@
     bottom:360px;
     background-color:black;
     
+}
+
+@media only screen and (max-width:688px){
+    .car-container{
+        background-color:black;
+        color:white;
+        margin:0px ;
+        margin-block: 50px;
+       
+    }
+
+    .car-container img{
+    
+        width: 375px;
+        height: 300px;
+      }
+
 }

@@ -5,7 +5,8 @@ const SingleReview = (props) => {
     const {name,description,number,_id} = props.review;
     return (
         <div>
-            <div className="single-review-container">
+            <div className="single-review-container shadow-lg">
+                <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/user-512.png" alt="" />
                 <h4 className="text-center">{name}</h4>
                 
                   <Rating className="rating"
