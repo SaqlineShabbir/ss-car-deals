@@ -33,6 +33,7 @@ const ManageCars = () => {
     }
     return (
         <div className="cars-main">
+       <h3 className="text-center pt-5">You can Delete Cars</h3>
         <div className="cars-container">
     
     {

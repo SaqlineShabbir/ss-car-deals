@@ -32,6 +32,7 @@
   }
   #about .section-title h3 {
     text-align: left;
+     margin-top: 100px;
   }
   #about .section-title-underline {
     margin-left: 0;
@@ -77,4 +78,8 @@
         grid-template-columns: 1fr ;
         
     }
+
+  
+
+    
 }

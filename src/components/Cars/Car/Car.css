@@ -4,7 +4,7 @@
     margin:30px ;
    
 }
-..car-container {}
+
 .car-container img{
     
   width: 400px;
@@ -40,12 +40,13 @@
         color:white;
         margin:0px ;
         margin-block: 50px;
+        
        
     }
 
     .car-container img{
     
-        width: 375px;
+        width: 360px;
         height: 300px;
       }
 
