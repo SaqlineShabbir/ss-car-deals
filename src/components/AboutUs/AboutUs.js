@@ -12,10 +12,11 @@ const AboutUs = () => {
                         <div class="section-title-underline">
                         </div>
                     </div>
-                    <p>Magna arbitror et dolor amet, fabulas do noster non eu mentitum praesentibus e est ex quid
-                        cupidatat.
-                        Dolore reprehenderit probant quorum tempor, illum hic ut illum pariatur. Qui o magna aute
-                        labore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, ab molestiae eaque tenetur non dignissimos beatae dicta, eligendi maxime cumque accusantium sit dolore qui dolores provident repudiandae voluptates totam aliquam.
+                    <p>After being in the collector-car business for a decade prior, ss company opened the doors to the first SS Car Deals showroom in Charlotte, NC in 2020. Armed with a customer-oriented business philosophy and a clear vision for success, she has since led SS Car Deals to an unrivaled sales volume that is currently among the best in the collector car industry.
+
+With the most knowledgeable and professionally trained staff in the industry, we have expanded nationally and opened showrooms in many major U.S. markets. 
+
+Today, SS Car Deals is known as the Nation's Trusted Consignment Dealer; providing sellers and buyers alike with the peace of mind that only comes from partnering with one of the largest classic car dealerships in the country.
                     </p>
     
                     <button class="work-btn">Our work</button>

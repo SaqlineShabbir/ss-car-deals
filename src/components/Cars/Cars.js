@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useAuth from '../../hooks/useAuth';
 import Car from './Car/Car';
 import './Cars.css'
 
@@ -11,6 +12,8 @@ const Cars = () => {
             
             setCars(data)})
     },[])
+    
+  
     return (
        <div className="cars-main">
            <h2 className="text-center fw-bolder">Our Cars</h2>

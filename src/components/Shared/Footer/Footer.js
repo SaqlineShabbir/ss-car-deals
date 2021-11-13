@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="footer">
             <div className="p-5">
                 <h4>SS CAR <span className="my-color"> DEALS</span> </h4>
-                <p>SS Travel is Travel agency where you will have save tour and best time with your family</p>
+                <p>SS Car Deals is known as the Nation's Trusted Consignment Dealer; providing sellers and buyers alike with the peace of mind that only comes from partnering with one of the largest classic car dealerships in the country</p>
             </div>
             <div className="footer-text">
                 <h6>Contact Us</h6>
@@ -36,10 +36,10 @@ const Footer = () => {
                  </div>
             </div>
             <div className="footer-text">
-                <h5>Clinic</h5>
+                <h5>ShowRoom</h5>
                 <div className="footer-p">
                 <p>Best service</p>
-                <p>About Clinic</p>
+                <p>About ShowRoom</p>
                 <p>Payment</p>
                 <p>suppliers</p>
                 </div>

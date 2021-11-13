@@ -44,7 +44,7 @@ const useFirebase = () =>{
       setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
         .then((result) => {
-          const destination = location?.state?.from || '/'
+          const destination = location?.state?.from || 'dashBoard'
           history.replace(destination)
           setAuthError('')
           

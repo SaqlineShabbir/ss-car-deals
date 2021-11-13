@@ -10,6 +10,7 @@ const MoreCars = () => {
             console.log(data)
             setAllCar(data)})
     },[])
+    
     return (
         <>
         <Header></Header>
