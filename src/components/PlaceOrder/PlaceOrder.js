@@ -9,7 +9,7 @@ const PlaceOrder = () => {
     const [data,setData] = useState([])
     const {user} = useAuth()
     useEffect(()=>{
-        fetch('http://localhost:5000/cars')
+        fetch('https://safe-sands-44519.herokuapp.com/allCars')
         .then(response => response.json())
         .then(data => setData(data))
     },[])
@@ -18,7 +18,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         data.status= "pending";
-        fetch('http://localhost:5000/orders', {
+        fetch('https://safe-sands-44519.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body:JSON.stringify(data)

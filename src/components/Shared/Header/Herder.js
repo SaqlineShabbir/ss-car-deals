@@ -15,7 +15,7 @@ const Herder = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto ">
         <Nav.Link as={Link} className="text-white fw-bold" to="/home">Home</Nav.Link>
-        <Nav.Link as={Link} className="text-white fw-bold mx-3" to="/login">Log In</Nav.Link>
+       <Nav.Link as={Link} className="text-white fw-bold mx-3" to="/login">Log In</Nav.Link>
         <Nav.Link as={Link} className="text-white fw-bold mx-3" to="/allCar">More Cars</Nav.Link>
        
         {

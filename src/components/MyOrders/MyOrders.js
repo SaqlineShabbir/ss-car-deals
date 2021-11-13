@@ -3,10 +3,10 @@ import useAuth from '../../hooks/useAuth';
 import './MyOrders.css'
 import MySingleOrder from './MySingleOrder/MySingleOrder';
 const MyOrders = () => {
-    const {user} = useAuth();
+    const {user, isLoading} = useAuth();
     const [myOrders, setMyOrders] =useState([])
       useEffect(()=>{
-          fetch(`http://localhost:5000/myOrders/${user?.email}`)
+          fetch(`https://safe-sands-44519.herokuapp.com/myOrders/${user?.email}`)
           .then(res =>res.json())
           .then(data =>{
               
@@ -17,7 +17,7 @@ const MyOrders = () => {
         const proceed =window.confirm('Are you sure you want to delete?')
         if(proceed) {
   
-          const url = (`http://localhost:5000/orders/${id}`)
+          const url = (`https://safe-sands-44519.herokuapp.com/orders/${id}`)
           fetch(url, {
               method: 'DELETE'
           })
@@ -32,11 +32,17 @@ const MyOrders = () => {
   
         }
       }
+
+      if(isLoading) {
+        return <div class="spinner-border" role="status">
+   <span class="visually-hidden">Loading...</span>
+ </div>
+     }
     return (
-        <div className="my-all-tours">
+        <div className="my-all-tours ">
         
-        <h4 className="text-center mt-5"> Welcome {user?.displayName} </h4>
-        <h4 className="text-center mt-1"> Your All Booking</h4>
+        <h4 className="text-center mt-5 fw-bolder"> Welcome  <span className="fst-italic text-primary">{user?.displayName} </span></h4>
+        <h4 className="text-center mt-1 fw-bolder"> Your All  Orders</h4>
         <div className="my-tours">
 
             

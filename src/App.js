@@ -42,9 +42,9 @@ function App() {
            <MoreCars></MoreCars>
          </Route>
         
-         <Route  path="/dashboard">
+         <PrivateRoute  path="/dashboard">
            <Dashboard></Dashboard>
-         </Route>
+         </PrivateRoute>
          <PrivateRoute  path="/PlaceOrder/:carId">
            <PlaceOrder></PlaceOrder>
          </PrivateRoute>

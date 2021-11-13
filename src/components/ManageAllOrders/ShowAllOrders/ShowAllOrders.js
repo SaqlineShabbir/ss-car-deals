@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ShowAllOrders.css'
 import { useForm } from "react-hook-form";
 const ShowAllOrders = (props) => {
-    const {carImg,status,  carName,number,description,_id} = props.singleOrder;
+    const {carImg,status,  carName,description,_id,name, phone} = props.singleOrder;
   const [orderId, setOrderId] = useState("")
 
   const handleOrderId = (Id) =>{
@@ -11,7 +11,7 @@ const ShowAllOrders = (props) => {
   }
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
-        fetch(`http://localhost:5000/statusUpdate/${orderId}`, { 
+        fetch(`https://safe-sands-44519.herokuapp.com/statusUpdate/${orderId}`, { 
             method: 'PuT',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(data)
@@ -32,8 +32,10 @@ const ShowAllOrders = (props) => {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">{carName}</h5>
-              <p class="card-text">{description}</p>
+              <h4 class="card-title">{carName}</h4>
+             
+              <h5 className="fst-italic">Ordered by  {name}</h5>
+              <p>Clients Phone Number: {phone}</p>
      <form onSubmit={handleSubmit(onSubmit)}>
       
       <select onClick={()=> handleOrderId(_id)} {...register("status")}>

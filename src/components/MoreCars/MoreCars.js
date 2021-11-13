@@ -4,7 +4,7 @@ import Header from '../Shared/Header/Herder'
 const MoreCars = () => {
     const [allCar, setAllCar] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allCars')
+        fetch('https://safe-sands-44519.herokuapp.com/allCars')
         .then(res => res.json())
         .then(data =>{ 
             console.log(data)
