@@ -52,9 +52,9 @@ const Dashboard = () => {
       <Offcanvas.Body>
         <Nav className="justify-content-end flex-grow-1 pe-3 ">
           {/* <Nav.Link as={Link} to={`${url}/`} className="dashboard-links"><i className="fas fa-sort-alpha-up"> DashBoardHome</i></Nav.Link> */}
-          <Nav.Link as={Link} to={`${url}/myOrders`} className="dashboard-links"><i className="fas fa-sort-alpha-up"></i> My Orders</Nav.Link>
-          <Nav.Link as={Link} to={`${url}/addReview`} className="dashboard-links"><i className="fas fa-plus-square"></i> Add Review</Nav.Link>
-          <Nav.Link as={Link} to={`${url}/payment`} className="dashboard-links"><i className="fas fa-money-check-alt"></i> Pay</Nav.Link>
+         {!admin && <Nav.Link as={Link} to={`${url}/myOrders`} className="dashboard-links"><i className="fas fa-sort-alpha-up"></i> My Orders</Nav.Link>}
+          {!admin && <Nav.Link as={Link} to={`${url}/addReview`} className="dashboard-links"><i className="fas fa-plus-square"></i> Add Review</Nav.Link>}
+         {!admin && <Nav.Link as={Link} to={`${url}/payment`} className="dashboard-links"><i className="fas fa-money-check-alt"></i> Pay</Nav.Link>}
 
           {admin && <Nav.Link as={Link} to={`${url}/addCars`} className="dashboard-links"><i className="fas fa-plus-square"></i> addCars </Nav.Link>}
          

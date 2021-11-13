@@ -11,7 +11,7 @@ const Herder = () => {
             <Navbar className="navbar" expand="lg">
   <Container >
     <Navbar.Brand className="text-white fw-bold" href="#home">SS CAR <span className="my-color fw-bolder">DEALS</span></Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Toggle style={{backgroundColor:"white"}} aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto ">
         <Nav.Link as={Link} className="text-white fw-bold" to="/home">Home</Nav.Link>
